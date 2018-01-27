@@ -1,0 +1,83 @@
+body
+{
+    background: url('../img/Mgnt.jpg') fixed center;
+    background-size: cover;
+}
+
+#addUserZone
+{
+    display:none;
+}
+
+#addTaskZone
+{
+    display:none;
+}
+
+h1
+{
+    text-align: center;
+    color:white;
+}
+
+p
+{
+    color:white; 
+    font-size: 20px;
+}
+
+u
+{
+    cursor: pointer;
+}
+
+li
+{
+    color:white;   
+}
+
+table
+{
+    color:#90CAF9; /* bleu clair */
+}
+
+label
+{
+    color:white;    
+}
+
+#msgZoneAddTask, #msgZoneAddUser
+{
+    color:#4CAF50; /* vert clair */
+}
+
+a, a:visited
+{
+    color:white;
+}
+
+#colorWhite
+{
+    color:white;      
+}
+
+table, td, th
+{
+    text-align:center;
+}
+
+.monTh
+{
+    text-align:center;
+    font-size: larger;
+}
+
+th, td
+{
+    padding : 5px;
+}
+
+.monTd
+{
+    padding : 5px;   
+}

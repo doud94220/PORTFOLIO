@@ -1,0 +1,408 @@
+/* Import de la police courgette */
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+body
+{
+	font:16px sans-serif; /* texte classique */
+	margin:0; /* Supprimer les marges extérieures par defaut de 8px du body */
+	background:url('../sources-image/img/background.png') repeat;
+	/* repeat pout que la toute petite image couvre tou le body */
+}
+
+/* bloquer le padding et le border pour largeur stable */
+*
+{
+	box-sizing:border-box; /* Declaration de box sizing */
+	-webkit-box-sizing:border-box; /* Chrome Safari Androïd */
+	-moz-box-sizing:border-box; /* Pour mozilla */
+}
+
+a
+{
+	text-decoration: none; /* pas de underline sur les liens */
+	color:#FFF; /* blanc */
+}
+
+/* survol des liens*/
+a:hover
+{
+	color:#f8bbd0; /* rose clair */
+}
+
+h1, h2, h3, h4
+{
+	font-family: 'Courgette', cursive;
+}
+
+nav
+{
+	background: #c55394; /* rose donné dans énoncé*/
+	color:#FFF; /*texte en blanc */
+	width:100%; /* 100% du père cad body */
+	text-align: center; /* Centrer le contenu du nav */
+}
+
+li
+{
+	display: inline-block; /* Aligner les li */
+	padding:10px; /* aggrandir la barre */
+	margin-right: 10px; /* Ecarter un peu les liens */
+}
+
+ul
+{
+	display: inline-block; /* Aligner MyUnicorn et le MyUnicorn */
+}
+
+nav>span
+{
+	margin-right: 500px; /* Repousser le menu à droite */
+	font-size: 1.5rem;
+	font-family: 'Courgette', cursive;
+	padding:10px; /* aggrandir la barre comme ul */
+}
+
+header
+{
+	background:url('../sources-image/img/rainbow.png') no-repeat center center;
+	height: 160px;	/* je force la hauteur initiale de l'image pour la voir en entier */
+}
+
+h1
+{
+	color:#c55394; /* même rose que menu */
+	margin:0;
+	font-size: 2rem;
+	height: 160px; /* je force la hauteur sur la taille du bck de header */
+	/* ci-dessous : centrer le titre dans le header */
+	display: flex;
+	/*  justify-content: center; */  /* comme animation je retire */
+    align-items: center;
+}
+
+/* animation sur titre 1 */
+h1
+{
+	animation:anim 2s 1 forwards; 
+}
+
+@keyframes anim
+{
+	from
+	{
+		transform:translateX(0%);
+	}
+
+	to
+	{
+		transform:translateX(42%);
+	}
+}
+
+/* Suite à l'animation le h1 ne sera pas tout à fait centré quand l'ecran se retrecit... */
+
+/* Petites etoiles devant les h2 */
+h2::before
+{
+	font-family: 'FontAwesome'; /* pour dire ou trouver le content ci-dessous */
+	content:'\f006';
+	color:#c55394; /* même rose que menu */
+	margin-right: 5px; /* marge externe à droite de l'étoile */
+	font-weight: lighter; /* police plus légère que l'héritage ne le calcule */
+}
+
+/* Cette partie contient tout le main sauf header et footer */
+.container
+{
+	width:1000px; /* on impose largeur en px pour le non-responsive */
+	margin:0 auto 30px; /* centrage horizontal et 30px de marge en bas */
+	background: #FFF; /* blanc */
+	border-radius: 10px; /* bords arrondis */
+	box-shadow: 0 0 10px #757575; /* blur de 10px de couleur grise */
+}
+
+.container h2
+{
+	color:#c55394; /* même rose que menu */
+	margin-left: 8px; /* decalage des h2 du container */
+}
+
+.galerie
+{
+	margin: 0 20px; /* marge externe galerie de 10px pour left et rigth */
+}
+
+.galerie figure
+{
+	display: inline-block; /* alignage des figures de la galerie */
+	/* on force la taille des figures pour centrage tout en maitenant ls marges */
+	width:226.65px;
+	/* marges externes des photos à 5px pour left et right */
+	margin:0 5px;
+	position: relative; /* père d'une figcaption en absolute */
+}
+
+.galerie img
+{
+	width: 100%; /* 100% du père qui lui est défini en px */
+}
+
+.galerie figcaption
+{
+	position: absolute; /* fils d'une figure en relative */
+	bottom:0; /* plaquée en bas */
+	width: 100%; /* 100% du père */
+	background: #212121; /* anthracite*/ 
+	color:#FFF; /* texte en blanc */
+	opacity: 0.8; /* opaque à 80% */
+	height: 1.5rem; /* taille police en focntion du font en root */
+}
+
+.galerie figcaption h5
+{
+	font-size: 0.9rem;
+	text-align: center;
+	color:#FFF;
+	font-weight: lighter;
+	vertical-align: center;
+	margin: 0;
+}
+
+.les-sections
+{
+	/*height:350px;*/
+	padding:15px;
+}
+
+.geoloc,.les-sections, .nous-trouver
+{
+	overflow: hidden; /* Ne pas dépasser du bloc nous-trouver */
+}
+
+.adresse-et-form
+{
+	padding:15px;
+}
+
+.adresse-et-form p
+{
+	line-height:1.5rem; /* hauteur de ligne aggrandie */
+}
+
+.les-sections h3
+{
+	color:#c55394; /* texte rose */
+	margin:0;
+}
+
+/* Partie geoloc prend 50% du container */
+.container .les-sections .geoloc
+{
+	width: 50%; /* 50% du père */
+	float:left;
+}
+
+iframe
+{
+	width: 100%; /* 100% du père cad geoloc */
+	border: none; /* pas de bordure autour de l'iframe */
+	height: 300px; /* je conserve les proportions origines de l'iframe avec un rapport de 1/4 entre width et heigth */
+}
+
+/* Partie adresse-et-form prend 50% du container */
+.container .les-sections .adresse-et-form
+{
+	width: 50%; /* 50% du père */
+	float: right;
+}
+
+input[type="submit"]
+{
+	display: block;
+	color:#FFF;
+	background: #c55394;
+	padding: 5px; /* bouton plus gros */
+	margin-top:5px; /* marge au dessus de bouton */
+}
+
+footer
+{
+	text-align: center;
+	background: #c55394; /* toujours le même rose */
+	color:#FFF; /* tjs texte en blanc */
+	padding: 15px; /* barre plus grosse */
+}
+
+#principe p
+{
+	text-align: left;
+	padding:20px;
+}
+
+/* Pour cacher la pub webhost */
+
+div > a
+{
+	display: none;
+}
+
+/****************************/
+/********* RESPONSIVE *******/
+/****************************/
+
+/* Page retrecie ou tablette : MAX 1000 pixels */
+
+@media screen and (max-width: 1000px)
+{
+	.container
+	{
+		width: auto; /* casser héritage de 1000px */
+		margin:auto 20px;
+	}
+
+	nav>span
+	{
+		margin-right:0; /* rapprocher MyUnicorn du menu */
+	}
+
+	#licornes
+	{
+		width: auto;
+	}
+
+	.galerie
+	{
+		display: inline-block; /* aligner les figures */
+		width: auto; /* cassage des héritages de width en pixels */
+	}
+
+	#licornes, .galerie
+	{
+		width: auto; /* cassage des héritages de width en pixels */
+	}
+	
+	.galerie figure
+	{
+		width:20vw; /* Taille évolue en fonction de largeur ecran */
+		margin: 0;
+		padding: 0;
+	}
+
+	iframe
+	{
+		height: 45vw; /* heigth évolue en fonction de largeur ecran */
+		width: 60vw; /* width évolue en fonction de largeur ecran */
+		/* Conservation des proportions de l'iframe */
+	}
+
+	.container, .les-sections, .adresse-et-form
+	{
+		height: auto; /* cassage des héritages en pixels */
+	}
+
+	.les-sections
+	{
+		height:auto; /* cassage des héritages en pixels */
+	}
+
+	.adresse-et-form>h3, .adresse-et-form>p
+	{
+		font-size: 0.9rem;
+	}
+}
+
+/* Portable : MAX 500 pixels */
+
+@media screen and (max-width: 500px)
+{
+	h1
+	{
+		font-size: 5vw;
+	}
+
+	h2
+	{
+		font-size: 4vw;
+	}
+
+	h3
+	{
+		font-size: 3.5vw;
+	}
+	
+	h4, h5, p
+	{
+		font-size: 3vw;
+	}
+
+	h2
+	{
+		text-align: center;
+	}
+
+	ul
+	{
+		display: none; /* on cache le menu */
+	}
+
+	.container
+	{
+		margin:auto 10px;
+	}
+
+	/* dispo en colonne */
+	.galerie
+	{
+		display: flex;
+    	flex-direction: column;
+	}
+
+	.galerie figure
+	{
+		margin:0 auto; /* centrage */
+		padding: 0;
+		width:70%; /* prendre une bonne part mais pas tout du père */
+		margin-bottom: 5px;	/* petit espacement des photos */
+	}
+
+	/* dispo en colonne des 2 sections */
+	.les-sections
+	{
+		display: flex;
+    	flex-direction: column;
+	}
+	
+	/* ajustement des 2 sections */
+	.geoloc, .adresse-et-form
+	{
+		display: block;
+		margin:0 auto; /* centrage */
+		width:90%;
+		margin-bottom: 5px;
+	}
+
+	/* centrage de selements de la section adresse-et-form */
+	.adresse-et-form>h3, .adresse-et-form>p, .adresse-et-form>form
+	{
+		text-align: center;
+	}
+
+	/* input du form à 100% du père */
+	.adresse-et-form>form>input
+	{
+		width:100%;
+	}
+
+	/* Casser des héritages */
+	.container .les-sections .geoloc
+	{
+		width: auto; /* Casser l'héritage de 50% */
+		float:none; /* Casser l'héritage en float left */
+	}
+	.container .les-sections .adresse-et-form
+	{
+		width: auto; /* Casser l'héritage de 50% */
+		float: none; /* Casser l'héritage en float right % */
+		height: auto; /* Casser l'héritage de 350px */
+	}
+}

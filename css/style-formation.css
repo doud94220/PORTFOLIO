@@ -1,0 +1,181 @@
+body
+{
+	font:16px verdana;
+	width:100%;
+	margin:0 auto;
+	background:#CFD8DC;
+}
+
+*
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1, h2, p
+{
+	text-align: justify;
+	/*width:650px;*/
+	width: 50vw;
+	margin: 0 auto;
+}
+
+h1
+{
+	/*font-size: 28px;*/
+	font-size: 2.1vw;
+	font-weight: bold;
+	color: black;
+	/*margin: 25px auto;*/
+	margin: 1.8vw auto;
+}
+
+h2
+{
+	/*font-size: 20px;*/
+	font-size: 1.4vw;
+	color: black;
+	margin-bottom: 1vw;
+}
+
+p
+{
+	font-size: 1.2vw;
+}
+
+#container
+{
+	display: flex;
+  	flex-direction: column;
+  	justify-content: space-around;
+ 	height: 36.8vw; /*height:500px;*/ /* je rajoute ca pour space-around */
+}
+
+#img-diplome-gauche
+{
+	position:absolute;
+	/*bottom : 30px;*/
+	bottom: 3vw;
+	/*left : 45px;*/
+	left:5vw;
+	/*height: 250px;*/
+	height: 15vw;
+	/*width: 250px;*/
+	width: 15vw;
+}
+
+#img-diplome-droite
+{
+	position:absolute;
+	/*top : 100px;*/
+	top:8vw;
+	right : 0px;
+	/*height: 161.25px;*/
+	height: 13vw;
+	/*width: 500px;*/
+	width: 40.31vw;
+}
+
+/* Pour cacher la pub webhost */
+
+div > a
+{
+	display: none;
+}
+
+/************************* RESPONSIVE PETIT LAPTOP < 1200px *************************/
+@media screen and (max-width:1200px)
+{
+	#img-diplome-gauche
+	{
+		bottom: 0.5vw;
+		left:0.5vw;
+	}
+}
+
+/************************* RESPONSIVE TABLETTE < 850px *************************/
+@media screen and (max-width:850px)
+{
+	h1
+	{
+		font-size: 2.2vw;
+	}
+
+	h2
+	{
+		font-size: 1.6vw;
+	}
+
+	p
+	{
+		font-size: 1.3vw;
+	}
+
+	#img-diplome-droite
+	{
+		top:10vw;
+	}
+}
+
+/************************* RESPONSIVE TABLETTE < 700px *************************/
+@media screen and (max-width:700px)
+{
+	h1
+	{
+		font-size: 2.3vw;
+	}
+
+	h2
+	{
+		font-size: 1.7vw;
+		margin-top: 3vw;
+	}
+
+	p
+	{
+		font-size: 1.6vw;
+	}
+}
+
+/************************* RESPONSIVE SMARTPHONE *************************/
+@media screen and (max-width:400px)
+{
+	
+	#img-diplome-gauche
+	{
+		display: none;
+	}
+
+	#img-diplome-droite
+	{
+		display: none;
+	}
+
+	#container
+	{
+	 	height: 80vw;
+	}
+
+	h1
+	{
+		font-size: 4.7vw;
+		width: auto;
+		text-align: center;
+		margin: 5vw auto;
+	}
+
+	h2
+	{
+		font-size: 3.5vw;
+		margin-top: 5vw;
+		width: 100%;
+	}
+
+	p
+	{
+		font-size: 3.1vw;
+		width:100%;
+		margin-top: 1.5vw;
+	}
+}

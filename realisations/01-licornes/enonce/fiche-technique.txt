@@ -1,0 +1,7 @@
+			backgorund header : #c55394
+
+			couleur titres : #c55394
+
+			Polices de caractères pour les titres : "Courgette",cursive(intégrer via google font)
+
+			Structure html : header,nav,main,section,footer

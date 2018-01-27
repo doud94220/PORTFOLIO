@@ -1,0 +1,23 @@
+ASSEZ URGENT :
+                    - Héberger mon portfolio [Applicatif, BDD] & Corriger merdes après déploiement
+          - Recup version soutenance de custom-shirt-2 & La tester (ATTENTE REPONSE GUILLAUME)
+      - [HORS SCOPE PORTFOLIO] Maj CV word et page linkedin et viadeo et CV et recherche sur pole-emploi
+- TESTER FINEMENT TOUT LE SITE SUR WEBHOST Y COMPRIS RESPONSIVE
+
+
+
+
+
+
+
+
+
+
+PAS LE FEU :
+- Corriger les 3 parties admin du site e-commerce au niveau AJOUT
+- Refaire eval n°2 avec boostrap et la rajouter aux realisations
+
+
+
+PAS OBLIGE :
+- Finir annonceo-2 et le mettre et le rajouter aux realisations

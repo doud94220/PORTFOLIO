@@ -1,0 +1,78 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    
+    <h1 id='colorWhite'>Welcome to my first API REST which aims at managing users and their tasks</h1><br>
+    
+    {# A cacher quand AJAX fini #}
+    {# <a href="{{ path('view_all_users') }}">Manage the users</a><br><br><br> #}
+    
+    {######## Voir tous les users et leurs tasks ####### #}
+    <p id="viewAllUsers">
+        <u>View all users</u>
+    </p>
+        
+    <div id="usersZone">
+        <ul>
+        </ul>
+    </div>
+
+    <p id="msgZoneDeleteUser">
+    </p>
+    
+    <div id="tasksZone">
+        {# Tasks du user asked #}
+    </div>
+
+    <p id="msgZoneDeleteTask">
+    </p>
+    
+    <div id="addTaskZone">
+        <form id="formAddTask" method="post" action="">
+            <div>
+                <label>Title : </label>
+                <input type="text" name="title">
+            </div><br>
+            <div>
+                <label>Description : </label>
+                <input type="text" name="description">
+            </div><br>
+            {# On met l'id du user dans un champ caché #}
+            <div>
+                <input id="hiddenIdUSer" type="hidden" name="id_user" value="">
+            </div><br>
+            <button type ="submit" class="btn btn-success">Add This Task To The Current User</button>
+        </form>
+    </div>
+
+    <p id="msgZoneAddTask">
+    </p><br>
+    
+
+    {######## Ajouter un user ####### #}
+    <p id="addUser">
+        <u>Add a user</u>
+    </p><br>
+
+    <div id="addUserZone">
+        <form id="formAddUser" method="post" action="">
+            <div>
+                <label>Name : </label>
+                <input type="text" name="name">
+            </div><br>
+            <div>
+                <label>Email : </label>
+                <input type="text" name="email">
+            </div><br>
+            <button type ="submit" class="btn btn-success">Add This User</button>
+        </form>
+    </div>
+
+    <p id="msgZoneAddUser">
+    </p>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="../web/script/scriptViewAllUsers.js"></script>
+    
+{% endblock %}

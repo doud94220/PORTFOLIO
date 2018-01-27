@@ -1,0 +1,18 @@
+<h1>Tasks for user asked</h1><br>
+
+{% for task in tasks %}
+    
+    <p>Number : {{ task.id }}</p>
+    <p>Title : {{ task.title }}</p>
+    <p>Description : {{ task.description }}</p>
+    <p>Creation date : {{ task.creation_date }}</p>
+    <p>Status : {{ task.status }}</p><br>
+    <a href="{{ path('delete_task',{id:task.id}) }}">Delete Task</a><br><br>
+     
+{% endfor %}
+
+<hr>
+<a href="{{ path('add_task',{id_user:userId}) }}">Add a new task</a>
+
+<hr>
+<a href="{{ path('view_all_users') }}">View All Users</a>

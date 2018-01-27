@@ -1,0 +1,13 @@
+<h1>Users</h1><br>
+
+{% for user in users %}
+    
+    <p>{{ user.name }}</p>
+    <p>{{ user.email }}</p>
+    <a href="{{ path('show_tasks_user',{id:user.id}) }}">Show tasks</a><br>
+    <a href="{{ path('delete_user',{id:user.id}) }}">Delete User</a><br><br>
+     
+{% endfor %}
+
+<hr>
+<a href="{{ path('add_user') }}">Add a new user</a>

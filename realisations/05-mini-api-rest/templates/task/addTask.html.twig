@@ -1,0 +1,17 @@
+<h1>New task creation</h1>
+
+<form method="post" action="{{ path('validate_add_task') }}">
+      <div>
+          <label>title</label>
+          <input type="text" name="title">
+      </div><br>
+      <div>
+          <label>description</label>
+          <input type="text" name="description">
+      </div><br>
+      {# On met l'id du user dans un champ caché #}
+     <div>
+          <input type="hidden" name="idUser" value="{{ id_user }}">
+      </div><br>
+      <button type ="submit">Add This Task</button>
+</form>

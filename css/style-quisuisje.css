@@ -1,0 +1,152 @@
+body
+{
+	background:#CFD8DC;
+	margin: 0;
+}
+
+*
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#container-global
+{
+	font:14px verdana;
+	margin:0 auto;
+	width:70vw; 	/* width:1000px; */
+	position:relative; /* pour gérer le h1 */
+	display:flex;
+  	flex-direction:column;
+  	justify-content:space-around;
+ 	height:43vw; /* height:585px; */ /* je rajoute le height pour space-around */
+}
+
+	#container-du-haut
+	{
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+		#image-sous-titre
+		{
+			background: url(../img/laptop.jpg) center center no-repeat scroll;
+			background-size: cover;
+			width:100%;
+			height : 21vw; /*height: 300px;*/
+			opacity: 0.6;
+			margin:0 0;
+			border-radius:5px;
+		}
+
+		h1
+		{
+			/* on se cale sur image du haut */
+			font-size: 2.05vw;
+			height : 21vw; /*height: 300px;*/
+			margin:0 auto;
+			line-height : 21vw; /*line-height: 300px;*/
+			/* centrage horizontal */
+			position: absolute; /* Son point de référence sera #container-global */
+			top:5px;
+			left:50%;
+			transform: translateX(-50%);
+			/* else */
+			color:black;
+			opacity: 1;
+		}
+
+	#container-du-bas
+	{
+		display: flex;
+		width: 100%;
+	}
+
+		#photo-profil
+		{
+			width : 10.5vw; /* width:150px; */
+			height: 18.69vw; /* height: 267px; */
+			border-radius:5px;
+		}
+
+		p
+		{
+			width : 59.5vw; /* width:850px; */
+			text-align: justify;
+			padding-left: 1vw; /*padding-left: 10px;*/
+			height: 18.69vw; /*height: 267px;*/
+			font:1.15vw verdana;
+			line-height: 1.5;
+			margin: 0;
+		}
+
+/* Pour cacher la pub webhost */
+
+div > a
+{
+	display: none;
+}
+
+/************************* RESPONSIVE TABLETTE *************************/
+
+@media screen and (max-width:1000px)
+{
+	#container-global
+	{
+		width : 100%;
+	}
+
+	#photo-profil
+	{
+		width : 15vw;
+		height: 26.7vw;
+	}
+	
+	p
+	{
+		width : 85vw;
+		height: 26.7vw;
+		font: 1.68vw verdana;
+	}
+
+	#container-du-haut
+	{
+		margin-top: 5px;
+	}
+
+	#container-du-bas
+	{
+		margin-top: 5px;
+	}
+}
+
+/************************* RESPONSIVE SMARTPHONE *************************/
+
+@media screen and (max-width:400px)
+{
+ 	#container-du-bas
+	{
+		flex-direction: column;
+	}
+
+	h1
+	{
+		font-size: 2.7vw;
+		height: 22vw;
+		line-height: 22vw;
+	}
+
+	#photo-profil
+	{
+		margin: 0 auto;
+	}
+
+	p
+	{
+		margin: 0 auto;
+		width : 99vw;
+		font: 2.8vw verdana;
+		margin-top: 5px;
+	}
+}

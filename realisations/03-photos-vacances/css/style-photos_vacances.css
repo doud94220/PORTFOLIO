@@ -1,0 +1,122 @@
+/***************** La classique **************/
+
+body
+{
+	font:16px sans-serif;
+	width:1200px;
+	margin:0 auto;
+	background: rgb(252,236,171); /* couleur sable */
+}
+
+h1
+{
+	font-weight: 100;
+	color:rgb(137,169,228); /* couleur bleu ocean */
+	width:100%;
+	text-align: center;
+	padding: 20px;
+}
+
+*
+{
+	box-sizing:border-box; /* Declaration de box sizing */
+	-webkit -box -sizing:border-box; /* Chrome Safari Androïd */
+	-moz -box -sizing:border-box; /* Pour Mozilla */
+	-ms -box -sizing:border-box; /* Pour IE */
+}
+
+/***************** Partie Carte Postale en haut **************/
+
+.container
+{
+	width:800px;
+	height: 400px;  /* TRES IMPORTANT : En relatif il faut mettre une HEIGHT sinon on voit pas le background */
+	margin:0 auto;
+	position: relative;
+}
+
+.box
+{
+	border: solid 5px white;
+	box-shadow: 0 0 1px black;
+	position: absolute;	/* on déplacera les photos plus bas avec des top/right/bottom/left */
+	transition-duration: 0.5s;
+}
+
+.box:hover
+{
+	transform: rotate(0deg)scale(1);
+	cursor: pointer;
+	z-index: 5;
+}
+
+/*.box:active
+{
+	border: solid 5px rgb(137,169,228);
+}
+*/
+.new-york
+{
+	transform: rotate(-15deg);
+	top : 25px;
+}
+
+.japon
+{
+	transform: rotate(-30deg);
+	left : 100px;
+	top : 100px;
+}
+
+.australie
+{
+	transform: rotate(-10deg);
+	left : 250px;
+	top : 150px;
+}
+
+.islande
+{
+	transform: rotate(10deg);
+	left : 300px;
+	top : 0px;
+}
+
+.chili
+{
+	transform: rotate(20deg);
+	left : 450px;
+	top : 75px;	
+}
+
+/***************** Partie Galerie en bas **************/
+
+#galerie-selectionnee
+{
+	width: 100%;
+}
+
+#galerie-selectionnee img
+{
+	margin: 20px 50px;
+}
+
+h2
+{
+	text-align: center;
+	font-size: 1em;
+	text-decoration: underline;
+}
+
+h2:hover
+{
+	cursor: pointer;
+	color:rgb(137,169,228);
+}
+
+/* Pour cacher la pub webhost */
+
+div > a
+{
+	display: none;
+}
