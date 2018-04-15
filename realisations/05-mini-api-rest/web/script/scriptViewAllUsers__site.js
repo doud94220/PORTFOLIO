@@ -12,7 +12,7 @@ $(function() //Attente du chargement de tous les elements du DOM
        //Appel de la bonne route en ajax
        var request = $.ajax(
         {
-    	  url: "http://localhost/PORTFOLIO/realisations/05-mini-api-rest/web/index_dev.php/view_all_users_ajax",
+    	  url: "https://portfolio-ea.000webhostapp.com/realisations/05-mini-api-rest/web/index_dev.php/view_all_users_ajax",
     	  method: "GET",
     	  dataype : "json"
     	});
@@ -48,7 +48,7 @@ $(function() //Attente du chargement de tous les elements du DOM
                 //requete ajax pour delete user
                 var request = $.ajax(
                 {
-                   url: "http://localhost/PORTFOLIO/realisations/05-mini-api-rest/web/index_dev.php/delete_user_ajax_sans_get/"+idUser,
+                   url: "https://portfolio-ea.000webhostapp.com/realisations/05-mini-api-rest/web/index_dev.php/delete_user_ajax_sans_get/"+idUser,
                    method: "DELETE",
                    dataype : "json"
                 });
@@ -83,7 +83,7 @@ $(function() //Attente du chargement de tous les elements du DOM
                 //requete ajax pour voir user tasks
                 var request = $.ajax(
                 {
-                   url: "http://localhost/PORTFOLIO/realisations/05-mini-api-rest/web/index_dev.php/show_tasks_user_ajax/"+idUser,
+                   url: "https://portfolio-ea.000webhostapp.com/realisations/05-mini-api-rest/web/index_dev.php/show_tasks_user_ajax/"+idUser,
                    method: "GET",
                    dataype : "json"
                 });
@@ -137,7 +137,7 @@ $(function() //Attente du chargement de tous les elements du DOM
                             //Appel de la bonne route en ajax
                             var request = $.ajax(
                             {
-                               url: "http://localhost/PORTFOLIO/realisations/05-mini-api-rest/web/index_dev.php/validate_add_task_ajax",
+                               url: "https://portfolio-ea.000webhostapp.com/realisations/05-mini-api-rest/web/index_dev.php/validate_add_task_ajax",
                                method: "POST",
                                data: $("form").serialize() //Mettre sur une ligne les data du form comme dans le get d'une url
                             });
@@ -169,7 +169,7 @@ $(function() //Attente du chargement de tous les elements du DOM
                         //requete ajax pour delete task
                         var request = $.ajax(
                         {
-                           url: "http://localhost/PORTFOLIO/realisations/05-mini-api-rest/web/index_dev.php/delete_task_ajax/"+idTask,
+                           url: "https://portfolio-ea.000webhostapp.com/realisations/05-mini-api-rest/web/index_dev.php/delete_task_ajax/"+idTask,
                            method: "DELETE",
                            dataype : "json"
                         });
@@ -224,7 +224,7 @@ $(function() //Attente du chargement de tous les elements du DOM
             //Appel de la bonne route en ajax
             var request = $.ajax(
             {
-               url: "http://localhost/PORTFOLIO/realisations/05-mini-api-rest/web/index_dev.php/validate_add_user_ajax",
+               url: "https://portfolio-ea.000webhostapp.com/realisations/05-mini-api-rest/web/index_dev.php/validate_add_user_ajax",
                method: "POST",
                data: $("form").serialize() //Mettre sur une ligne les data du form comme dans le get d'une url
             });

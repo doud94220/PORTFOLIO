@@ -129,3 +129,13 @@ div > a
 		margin-top: 25px;
 	}
 }
+
+/****************** Correction problème sur ecran très grans : ecraser concurrence boostrap ***********************/
+/*Need vider le cache*/
+@media screen and (min-width: 992px)
+{
+	#monContainer
+	{
+	    width: 100%;
+	}
+}
